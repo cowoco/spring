@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>게시글보기</title>
+		<title>회원정보 보기</title>
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<style>
 		   *{margin:0; padding:0;}
@@ -24,40 +24,40 @@
 	<body>
 	  
 	  <div>
-	   <h1>게시글보기</h1>
+	   <h1>회원정보보기</h1>
 		   <table>
 		     <colgroup>
 		       <col width="20%">
 		       <col width="80%">
 		     </colgroup>
 		     <tr>
-		       <th>번호</th>
+		       <th>아이디</th>
 		       <td></td>
 		     </tr>
 		     <tr>
-		       <th>작성자</th>
+		       <th>패스워드</th>
 		       <td></td>
 		     </tr>
 		     <tr>
-		       <th>날짜</th>
-		       <td>${bdto.bdate}</td>
+		       <th>이름</th>
+		       <td></td>
 		     </tr>
 		     <tr>
-		       <th>제목</th>
-		       <td>${bdto.btitle}</td>
+		       <th>전화번호</th>
+		       <td></td>
 		     </tr>
 		     <tr>
-		       <th>내용</th>
-		       <td>${bdto.bcontent}</td>
+		       <th>성별</th>
+		       <td></td>
 		     </tr>
 		     <tr>
-		       <th>이미지 이름</th>
-		       <td>${bdto.bfile}</td>
+		       <th>취미</th>
+		       <td></td>
 		     </tr>
 		   </table>
-		   <a href="noticeUpdate"><button type="button" id="fbtn">게시글수정</button></a>
-		   <a href="noticeDelete"><button type="button" id="fbtn">게시글삭제</button></a>
-		   <a href="noticeList"><button type="button">게시글리스트</button></a>
+		   <a href="memberUpdate"><button type="button" id="fbtn">회원정보수정</button></a>
+		   <a href=""><button type="button" id="fbtn">회원삭제</button></a>
+		   <a href="/"><button type="button">메인페이지 이동</button></a>
 	  </div>
 	
 	</body>

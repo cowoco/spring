@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>    
 <!DOCTYPE html>
 <html>
 	<head>
@@ -39,12 +39,12 @@
 	<body>
 	  <div>
 	   <h1>회원가입</h1>
-	   <form name="m_frm" method="post" action="doMemberInsert">
+	   <form name="m_frm" method="post" action="doMInsert">
 		   <table>
 		     <tr>
 		       <th>아이디</th>
 		       <td>
-				   <input type="text" name="id" id="id">
+				   <input type="text" name="id" id="id" >
 		           <button type="button" id="idCheck">아이디 확인</button>
 		       </td>
 		     </tr>
@@ -54,49 +54,39 @@
 		     </tr>
 		     <tr>
 		       <th>이름</th>
-		       <td><input type="text" name="name" id="name"></td>
+		       <td><input type="text" name="name" id="name" ></td>
 		     </tr>
 		     <tr>
 		       <th>전화번호</th>
-		       <td><input type="text" name="phone" id="phone"></td>
+		       <td><input type="text" name="phone" id="phone" ></td>
 		     </tr>
 		     <tr>
 		       <th>성별</th>
 		       <td>
-			       <input type="radio" name="gender" id="Male" value="Male">
-			       	
-
-				         <label for="Male">남자</label>
-			         <input type="radio" name="gender" id="Female" value="Female">
-
-					<%-- <c:if test="${fn:contains(mdto.gender,'Female')}">checked</c:if> --%>
-			        	 <label for="Female">여자</label>
+		         <input type="radio" name="gender" id="Male" value="male">
+		         <label for="Male">남자</label>
+		         <input type="radio" name="gender" id="female" value="female">
+		         <label for="Female">여자</label>
 		       </td>
 		     </tr>
 		     <tr>
 		       <th>취미</th>
 		       <td>
-		         <input type="checkbox" name="hobby" id="game" value="game"
-<%-- 		         	<c:if test="${fn:contains(mdto.hobby,'game')}">checked</c:if> --%>
-		         >
+		         <input type="checkbox" name="hobby" id="game" value="game">
 		         <label for="game">게임</label>
 		         <input type="checkbox" name="hobby" id="golf" value="golf">
-
 		         <label for="golf">골프</label>
 		         <input type="checkbox" name="hobby" id="run" value="run">
-		        
 		         <label for="run">조깅</label>
 		         <input type="checkbox" name="hobby" id="cook" value="cook">
-		      
 		         <label for="cook">요리</label>
 		         <input type="checkbox" name="hobby" id="book" value="book">
-		      
 		         <label for="book">독서</label>
 		       </td>
 		     </tr>
 		   </table>
-		  <button type="button" id="fbtn">저장</button>
-		  <button type="button" onclick="javascript:location.href='/'">취소</button>
+		   <button type="button" id="fbtn">저장</button>
+		   <button type="button" onclick="javascript:location.href='/'">취소</button>
 	   </form>
 	  </div>
 	

@@ -32,7 +32,7 @@
 	<body>
 	  <div>
 	   <h1>글쓰기</h1>
-	   <form name="b_frm" method="post" action="noticeList" enctype="multipart/form-data">
+	   <form name="b_frm" method="post" action="doNoticeInsert" >
 		   <table>
 		     <colgroup>
 		       <col width="20%">

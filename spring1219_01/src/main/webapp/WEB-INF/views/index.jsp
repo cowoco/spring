@@ -20,14 +20,14 @@
 				<li><strong style="font-size: 20px">${session_name }님 환영합니다.</strong></li>
 				<a href="member/logout"><li>로그아웃</li></a>
 			</c:if>
-			<a href="board/bInsert2"><li>다중 업로드</li><a>
-			<a href="board/bList2"><li>다중 업로드 리스트(List)</li><a>
-			<br>
+			<a href="member/mInsert"><li>회원가입</li><a>
 			<a href="board/bList"><li>공지사항리스트(List)</li><a>
-			<a href="mInsert"><li>회원가입</li><a>
 			<a href="boardBno"><li>글번호</li><a>
 			<a href="bInsert"><li>공지사항글쓰기(Insert)</li><a>
 			<a href="bView"><li>공지사항보기(View)</li><a>
+			<br>
+			<a href="board/bInsert2"><li>다중 업로드</li><a>
+			<a href="board/bList2"><li>다중 업로드 리스트(List)</li><a>
 		</ul>
 	</body>
 </html>

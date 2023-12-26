@@ -9,10 +9,10 @@
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <title>doLogin</title>
 
-
 </head>
 	<body>
 		<script>
+		alert("result : "+${result});
 			if(${result}==1){
 				alert("로그인이 되었습니다.");
 				location.href="/";

@@ -1,7 +1,7 @@
 <%@page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,15 +16,13 @@
 <body>
 <section>
     <h1>관리자 글쓰기</h1>
-    <hr>
-
+	<hr>
     <form action="bInsert" name="insertFrm" method="post" enctype="multipart/form-data">
       <table>
         <colgroup>
           <col width="15%">
           <col width="85%">
         </colgroup>
-        
         <tr>
           <th>작성자</th>
           <td>
@@ -43,7 +41,6 @@
             <textarea name="bcontent" cols="50" rows="10"></textarea>
           </td>
         </tr>
-   
         <tr>
           <th>이미지 표시</th>
           <td>

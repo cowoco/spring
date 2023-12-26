@@ -1,0 +1,33 @@
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <!--인터페이스 연결 MemberMapper.java -->  
+<mapper namespace="com.java.www.mapper.BoardMapper"> 
+  <!--//공지사항 전체 가져오기  -->
+  <select id="selectAll"  resultType="com.java.www.dto.BoardDto">
+  	select * from
+  	(select row_number() over(order by bgroup desc,bstep asc) rnum,a.*from board a)
+  	where rnum between 1 and 10 
+  </select>
+  <!--//게시글 1개 가져오기  -->
+  <select id="selectOne"  resultType="com.java.www.dto.BoardDto">
+  	select * from board where bno=#{bno}
+  </select>
+  <!--//댓글 전체 가져오기 -->
+  <select id="BCommentSelectAll"  resultType="com.java.www.dto.BCommentDto">
+  	select * from ecomment where bno=#{bno} order by cno desc
+  </select>
+  <!-- 시퀀스(cno) 생성후 댓귿저장  시퀀스를 리턴 -->
+  <!--db에 저장된 댓글 1개 가져오기  -->
+  <insert id="BCommentInsert">
+  	<selectKey resultType="int" keyProperty="cno" order="BEFORE">
+  		select ecomment_seq.nextval from dual
+  	</selectKey>
+  	
+  	insert into ecomment values (#{cno},#{bno},#{id},#{cpw},#{ccontent},sysdate )
+  </insert>
+  <select id="BCommentSelectOne" resultType="com.java.www.dto.BCommentDto">
+  	select * from ecomment where cno=#{cno}
+  </select>
+  
+</mapper>

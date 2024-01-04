@@ -13,7 +13,7 @@ public interface BService {
 	List<BoardDto> selectAll();
 	//db에 저장된 댓글 1개 가져오기 
 	Map<String, Object> selectOne(int bno);
-
+	//ajax 댓글 입력
 	BCommentDto BCommentInsert(BCommentDto cdto);
 
 }

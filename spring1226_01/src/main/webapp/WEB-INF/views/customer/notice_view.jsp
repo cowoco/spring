@@ -274,6 +274,7 @@ $(document).ready(function() {
 						
 						let bno = ${map.bdto.bno};
 						
+				
 						$(".replyBtn").click(function(){
 							//alert("댓글을 등록합니다.");
 							if("${session_id}"==""){
@@ -310,13 +311,14 @@ $(document).ready(function() {
 									alert("실패");
 								}
 								
-							});
+							});//ajax
+				
 							
 							
 							
 							
-						});
-					});
+						});//로그인을 해야지만 
+					});//function
 					</script>
 					
 					<!-- 댓글-->

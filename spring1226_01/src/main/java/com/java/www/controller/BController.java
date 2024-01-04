@@ -26,15 +26,12 @@ public class BController {
 	@Autowired BService bService;
 	@Autowired HttpSession session;
 	
-	
-	@GetMapping("notice")
+
+	@GetMapping("notice")//공지사항 전체가져오기
 	public String notice(Model model) {
 		//page 가지고 와야 함 
-		
-		
 		//service연결 - list 
 		List<BoardDto> list = bService.selectAll();
-		
 		//model
 		model.addAttribute("list",list);
 		return "customer/notice";

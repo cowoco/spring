@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -250,18 +251,13 @@ $(document).ready(function() {
 									error:function(){
 										alert("실패");
 									}
-								});
-								
-								
-								
-								
-								
+								});//ajax
 								
 								
 								//jsp형태
 								//loginFrm.submit();
-							});
-						});
+							});//sbtn
+						});//end
 					</script>
 					<form action="login" method="post" name="loginFrm" id="loginFrm">
 						<div class="informbox">
